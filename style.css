@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+html[lang="ja"] {
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+a,
+p {
+    margin: 0;
+}
+
+
+body {
+    --sb-track-color: #d2d2d2;
+    --sb-thumb-color: #ff701e;
+    --sb-size: 5px;
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 1px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+main {
+    padding: 100px 20% 400px 20%;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        margin-top: 38px;
+    }
+
+    main {
+        padding: 100px 5% 300px 5%;
+    }
+}
+
+/*==========TOP==========*/
+.top {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    padding: 200px 0 200px 0;
+    justify-content: center;
+}
+
+.top-txtbox {
+    flex-direction: column;
+    padding: 110px 0 0 50px;
+    font-weight: bold;
+    height: 200px;
+}
+
+#top-logo {
+    width: 330px;
+    height: 330px;
+}
+
+.top-txt1 {
+    margin: 0 0 0 20px;
+    font-size: 1vw;
+}
+
+.top-txt2 {
+    padding: 0 0 0 0;
+    text-align: center;
+    font-size: 5vw;
+}
+
+/*for mobile*/
+@media screen and (max-width: 768px) {
+    .top {
+        display: block;
+        padding: 50px 0 50px 0;
+        height: 300px;
+        text-align: center;
+    }
+
+    .top-txtbox {
+        padding: 0;
+        width: auto;
+        height: auto;
+    }
+
+    #top-logo {
+        width: 200px;
+        height: 200px;
+    }
+
+    .top-txt1 {
+        margin: 0;
+        font-size: 10px;
+    }
+
+    .top-txt2 {
+        font-size: 45px;
+    }
+}
+
+/*==========title==========*/
+.title {
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.m-title {
+    font-size: 60px;
+    margin: 0;
+}
+
+.s-title {
+    padding: 50px 0 0 20px;
+    color: gray;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        margin-bottom: 50px;
+    }
+
+    .m-title {
+        font-size: 40px;
+    }
+
+    .s-title {
+        font-size: 10px;
+        padding: 33px 0 0 10px;
+    }
+}
+
+/*==========About==========*/
+#About {
+    margin-bottom: 200px;
+}
+
+.about-main {
+    display: flex;
+}
+
+#about-img {
+    width: 400px;
+    height: 400px;
+    margin-top: -50px;
+}
+
+#about-txtbox {
+    padding: 0 0 0 50px;
+}
+
+#about-txt1 {
+    font-weight: bold;
+    font-size: 1.8vw;
+    margin: 30px 0;
+}
+
+span.marker {
+    background: linear-gradient(transparent 70%, #ffc400 70%);
+}
+
+@media screen and (max-width: 1250px) {
+    .about-main {
+        display: block;
+        text-align: center;
+    }
+
+    #about-img {
+        width: 300px;
+        height: 300px;
+        margin-top: -30px;
+    }
+
+    #about-txtbox {
+        text-align: left;
+        padding: 0;
+    }
+
+    #about-txt1 {
+        font-size: 20px;
+        margin: 30px 0 15px 0;
+    }
+}
+
+/*==========blog==========*/
+.notblog {
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .notblog {
+        width: 200px;
+    }
+}
+
+/*==========contact==========*/
+#contact {
+    padding: 150px 20%;
+    height: 400px;
+    position: relative;
+    margin-bottom: 200px;
+}
+
+#contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #252525;
+    transform: skewY(-3deg);
+    z-index: -1;
+}
+
+.contact-main {
+    margin: 10px 0 0 0;
+}
+
+#mail {
+    text-align: center;
+    margin-top: 150px;
+}
+
+#contact-btn {
+    color: #ff701e;
+    font-size: 16px;
+    font-weight: bold;
+    background: transparent;
+    padding: 18px 30px;
+    border: 3px solid #ff701e;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1;
+    transition: .3s;
+    text-decoration: none;
+}
+
+#contact-btn::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #ff701e;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform ease .3s;
+}
+
+#contact-btn:hover {
+    color: #fff;
+}
+
+#contact-btn:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+
+@media screen and (max-width: 768px) {
+    #contact {
+        padding: 100px 5%;
+        height: 350px;
+    }
+
+    .contact-main {
+        margin-top: 80px;
+    }
+}

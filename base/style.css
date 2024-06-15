@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+html[lang="ja"] {
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+body,
+a,
+p {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Shrinking for mobile*/
+@media screen and (max-width: 768px) {
+
+    body {
+        padding-top: 45px;
+    }
+
+    #o-main {
+        margin: 50px 20px !important;
+    }
+
+    .o-title {
+        font-size: 50px !important;
+    }
+}
+
+@media screen and (max-width: 767px) {}
+
+#o-main {
+    margin: 50px 20%;
+}
+
+.o-title {
+    margin-left: 0px;
+    font-size: 60px;
+}
+

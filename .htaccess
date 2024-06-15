@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://kova58.com/$1 [R=301,L]
+Options +Includes
+AddHandler server-parsed html
+ErrorDocument 404 /404.html

@@ -1,0 +1,50 @@
+/*======文字がぬるり=====*/
+.matrix .bg-wrap,
+.matrix .bg-wrap .inn {
+    display: block;
+}
+
+.matrix .bg-wrap {
+    overflow: hidden;
+    opacity: 0;
+}
+
+.matrix .bg-wrap .inn {
+    opacity: 0;
+    transform: matrix(1, 0, 0, 1, 0, 100);
+    transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.matrix.is-active .bg-wrap {
+    opacity: 1;
+}
+
+.matrix.is-active .bg-wrap .inn {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+/*======fadeup=====*/
+.fadeup {
+    opacity: 0;
+}
+
+.fadeup.is-active {
+    animation: fadeup 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+@keyframes fadeup {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

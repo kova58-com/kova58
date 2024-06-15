@@ -1,0 +1,6 @@
+    <div class="loading">
+        <div class="loading-screen">
+            <img id="load-img" src="img/logo.png" alt="logo">
+            <p id="load-txt">Now loading...</p>
+        </div>
+    </div>
