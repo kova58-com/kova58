@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+html[lang="ja"] {
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+a,
+p {
+    margin: 0;
+}
+
+
+body {
+    --sb-track-color: #d2d2d2;
+    --sb-thumb-color: #ff701e;
+    --sb-size: 5px;
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 1px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+main {
+    padding: 100px 20% 100px 20%;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        margin-top: 38px;
+    }
+
+    main {
+        padding: 100px 5% 100px 5%;
+    }
+}
