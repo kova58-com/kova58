@@ -80,12 +80,14 @@ main {
 .top-txt1 {
     margin: 0 0 0 20px;
     font-size: 1vw;
+    color: #333;
 }
 
 .top-txt2 {
     padding: 0 0 0 0;
     text-align: center;
     font-size: 5vw;
+    color: #333
 }
 
 /*for mobile*/
@@ -122,11 +124,13 @@ main {
 .title {
     display: flex;
     margin-bottom: 80px;
+    color: #333
 }
 
 .m-title {
     font-size: 60px;
     margin: 0;
+    color: #333
 }
 
 .s-title {
@@ -172,6 +176,11 @@ main {
     font-weight: bold;
     font-size: 1.8vw;
     margin: 30px 0;
+    color: #333
+}
+
+#about-txt2 {
+    color: #333
 }
 
 span.marker {
