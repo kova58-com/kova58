@@ -41,27 +41,47 @@
     <link rel="shortcut icon" href="https://kova58.com/ico/favicon.ico?v=3.1">
     <meta name="msapplication-TileColor" content="#da532c">
     <!--CSS-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=0.1.0">
 </head>
 <body>
-    <!--#include virtual="/parts/menu.html"-->
+    <!--#include virtual="https://kova58.com/parts/menu.html"-->
     <main>
         <h2 id="page-title"><span>About</span></h2>
+        <!--Developer-->
         <h3 class="uline_style06_02">管理人</h3>
         <div id="developer">
-            <div id="dev-icon"><img src="../img/logo.png" style="width: 150px; height: 150px;" alt="icon"></div>
+            <div id="dev-icon"><img src="../img/about/logo.png" style="width: 150px; height: 150px;" alt="icon"></div>
             <dev id="dev-info">
                 <h3 style="margin: 0;"><b>Kobayashi</b></h3>
                 <p style="font-size: small;margin: 5px;">Web Development / Illustration</p>
                 <p style="margin-top: 10px; color: gray;">好きな漫画は『メイドインアビス』<br>Web関係の仕事に就けるように勉強中</p>
                 <div id="link">
-                    <a href="#"><img src="../img/sns/twitter-brands-solid.svg" style="width: 50px; height: 50px; margin-right: 20px;"></a>
-                    <a href="#"><img src="../img/sns/pixiv-brands-solid.svg" style="width: 50px; height: 50px; margin-right: 20px;"></a>
-                    <a href="#"><img src="../img/sns/envelope-solid.svg" style="width: 50px; height: 50px; margin-right: 20px;"></a>
+                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><img src="../img/sns/twitter-brands-solid.svg" class="link_ico"></a>
+                    <a href="mailto:admin@kova58.com"><img src="../img/sns/envelope-solid.svg" class="link_ico"></a>
                 </div>
             </dev>
         </div>
+        <!--About-site-->
+        <h3 class="uline_style06_02">このサイトについて</h3>
+        <div id="about-site">
+            <div class="about-content">
+                <p class="about-txt">▪利用しているレンタルサーバー</p>
+                <a href="https://www.xrea.com/" target="_blank" rel="noopener noreferrer"><img class="about-img" src="../img/about/xrea.png"></a>
+                <p class="info">広告表示義務があるが無料でSSLが利用できるのが良い<br>学生にとってはとてもありがたいサービス</p>
+            </div>
+            <div class="about-content">
+                <p class="about-txt">▪利用しているドメイン取得サービス</p>
+                <a href="https://www.xdomain.ne.jp/" target="_blank" rel="noopener noreferrer"><img class="about-img" src="../img/about/xdomain.png"></a>
+                <p class="info">サイトを作成した時では「.com」の価格が他サービスと比べて安かったため利用してます</p>
+            </div>
+        </div>
+        <!--GitHub-->
+        <h3 class="uline_style06_02">サイトのコード公開中！</h3>
+        <div id="github">
+            <a href="https://github.com/kova58-com/kova58" target="_blank" rel="noopener noreferrer"><img src="../img/about/github.jpg" id="git-img"></a>
+            <p style="color: gray; margin-left: 20px;">GitHubにてkova58.comのソースコードを公開しています。興味があったらぜひ見ていって下さい。</p>
+        </div>
     </main>
-    <!--#include virtual="/parts/footer.html"-->
+    <!--#include virtual="https://kova58.com/parts/footer.html"-->
 </body>
 </html>

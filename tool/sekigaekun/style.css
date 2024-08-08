@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+html[lang="ja"] {
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+a,
+p {
+    margin: 0;
+}
+
+main {
+    padding: 100px 10%;
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        margin-top: 38px;
+    }
+
+    main {
+        padding: 100px 5% 100px 5%;
+    }
+}
+
+/*===========cp_box==========*/
+.cp_box *,
+.cp_box *:before,
+.cp_box *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.cp_box {
+    position: relative;
+}
+
+.cp_box label {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    height: 140px;
+    margin-bottom: 0px;
+    /* グラデーションの高さ */
+    cursor: pointer;
+    text-align: center;
+    /* 以下グラデーションは背景を自身のサイトに合わせて設定してください */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 90%);
+}
+
+.cp_box input:checked+label {
+    background: inherit;
+    /* 開いた時にグラデーションを消す */
+}
+
+.cp_box label:after {
+    line-height: 2.5rem;
+    position: absolute;
+    z-index: 2;
+    bottom: 20px;
+    left: 50%;
+    width: 16rem;
+    font-family: FontAwesome;
+    content: '▼ さらに表示';
+    transform: translate(-50%, 0);
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    border-radius: 20px;
+    background-color: #ff701e;
+}
+
+.cp_box input {
+    display: none;
+}
+
+.cp_box .cp_container {
+    overflow: hidden;
+    height: 250px;
+    /* 開く前に見えている部分の高さ */
+    transition: all 0s;
+}
+
+.cp_box input:checked+label:after {
+    font-family: FontAwesome;
+    content: ' ▲ 閉じる';
+}
+
+.cp_box input:checked~.cp_container {
+    height: auto;
+    padding-bottom: 80px;
+    /* 閉じるボタンのbottomからの位置 */
+    transition: all 0s;
+}
+
+/*===========setumei==========*/
+.border {
+    border-top: 2px solid #c2c2c2;
+    border-radius: 5px;
+    margin: 30px 0 0 0;
+}
+
+/*===========seat==========*/
+#seat {
+    margin-top: 50px;
+}
+
+#setting {
+    margin-bottom: 0px;
+}
+
+input {
+    width: 40px;
+    margin-right: 10px;
+}
+
+button {
+    margin: 10px;
+    padding: 3px 12px;
+    color: white;
+    background-color: #ff701e;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff9c63;
+    transform: scale(0.98);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    border: 2px solid rgb(199, 199, 199);
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N6FKP797D3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-N6FKP797D3');
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>席替えくん1号 / kova58</title>
+    <meta name="theme-color" content="white">
+    <meta name="description" content="シンプルで簡単！席替えツール">
+    <meta name="title" content="席替えくん" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kova58.com/tool/sekigaekun/" />
+    <meta property="og:title" content="kova58.com" />
+    <meta property="og:description" content="シンプルで簡単！席替えツール" />
+    <meta property="og:image" content="https://kova58.com/img/tool/sekigaekun/sekigae-kun.jpg" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://kova58.com/" />
+    <meta property="twitter:title" content="kova58.com" />
+    <meta property="twitter:description" content="シンプルで簡単！席替えツール" />
+    <meta property="twitter:image" content="https://kova58.com/img/tool/sekigaekun/sekigae-kun.jpg" />
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://kova58.com/ico/apple-touch-icon.png?v=3.1">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://kova58.com/ico/favicon-32x32.png?v=3.1">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://kova58.com/ico/favicon-16x16.png?v=3.1">
+    <link rel="manifest" href="https://kova58.com/ico/site.webmanifest?v=3.1">
+    <link rel="mask-icon" href="https://kova58.com/ico/safari-pinned-tab.svg?v=3.1" color="#ff5900">
+    <link rel="shortcut icon" href="https://kova58.com/ico/favicon.ico?v=3.1">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css?v=0.1.0">
+</head>
+
+<body>
+    <main>
+        <div class="cp_box">
+            <input id="cp01" type="checkbox">
+            <label for="cp01"></label>
+            <div class="cp_container">
+                <div id="setumei">
+                    <h4>【ツールについて】</h4>
+                    <p>「席替えくん１号」です。名前の通り席替えするときに便利かもしれないツールです。</p>
+                    <p>高3の夏に受験勉強の息抜きで作った程度のクオリティなので、そこらへんはご勘弁を…</p>
+                    <hr class="border">
+                    <h4>【ツールの使い方】</h4>
+                    <p>
+                        <b>“縦”</b>の数値を変えることで座席の行を変更することが出来ます。<br>
+                        <b>“横”</b>の数値を変えることで座席の列を変更することが出来ます。<br>
+                        <b>“生徒の数”</b>の数値を変えることで名簿番号の最大値を変更することが出来ます。
+                    </p>
+                    <p style="margin: 10px 0; color: rgb(233, 23, 58);">※僕の知識と技術の不足により空席を作ることが出来ません。<b>縦 × 横 ≦
+                            生徒の人数</b>となるように指定して下さい。</p>
+                    <h4 style="margin: 30px 0 0 0; color: rgb(100, 100, 100);">どーしても空席を作りたい場合↓</h4>
+                    <p style="color: rgb(100, 100, 100);">他の方が既に公開されているツールを使うことをオススメします。<br>空席を作ることもでき、便利な機能が備わっていてとても使いやすいです。</p>
+                    <p style="text-align: right; font-size: small; color: gray; margin-top: 50px;">ver. 1.0.0<br>[更新] 2024/08/08</p>
+                </div>
+            </div>
+        </div>
+        <div id="seat">
+            <div id="setting">
+                <label for="rows">縦:</label>
+                <input type="number" id="rows" value="6" min="1" max="50">
+                <label for="cols">横:</label>
+                <input type="number" id="cols" value="6" min="1" max="50">
+                <label for="maxValue">生徒の人数:</label>
+                <input type="number" id="maxValue" value="36" min="1" max="2500"><br>
+                <button onclick="createRandomTable()">ランダム生成</button>
+            </div>
+        </div>
+        <table id="randomTable"></table>
+        <script src="random.js"></script>
+        <hr class="border">
+    </main>
+    <!--#include virtual="https://kova58.com/parts/footer.html"-->
+</body>
+
+</html>
